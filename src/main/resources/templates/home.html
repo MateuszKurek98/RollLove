@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Roll Love</title>
-    <link rel="stylesheet" type="text/css" href="/css/styleshop.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
 </head>
 <body>
     <header th:replace="fragments/header :: ShopHeader"></header>
-
+    <img id="imgt" src="https://www.oberson.com/media/contentmanager/content/MicrosoftTeams-image%20(88).png">
     <div class="main-content">
         <div class="item" th:each="item : ${items}">
             <p class="item-name" th:text="${item.name}"></p>
 
             <img th:src="@{${item.imgUrl}}">
 
-            <div>
-                <span>Cena: </span>
+            <div id="cena">
+                <span >Cena: </span>
                 <span th:text="${item.price}"> </span>
                 <span>zł</span>
             </div>

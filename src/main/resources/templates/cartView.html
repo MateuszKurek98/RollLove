@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Roll Love</title>
-    <link rel="stylesheet" type="text/css" href="/css/styleshop.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+
 </head>
 <body>
 <header th:replace="fragments/header :: ShopHeader"></header>
@@ -41,7 +42,7 @@
     </table>
 
     <div class="summary">
-      <p><span>Do zapłaty</span><span th:text="${@cart.sum}"></span>$</p>
+      <p><span>Do zapłaty:</span><span th:text="${@cart.sum}"></span>zł</p>
     </div>
     <a th:href="@{/order/summary}" class="add-btn">Dalej</a>
   </div>
